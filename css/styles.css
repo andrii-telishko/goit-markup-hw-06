@@ -589,15 +589,18 @@ body {
 .footer-social {
   display: flex;
   flex-direction: column;
+  margin-right: 106px;
 }
 
-.join {
+.join,
+.subscribe {
+  display: block;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 
   color: var(--main-background-color);
 }
@@ -609,6 +612,60 @@ body {
 
 .footer-social .icon {
   fill: var(--main-background-color);
+}
+
+.subscribe-input {
+  display: flex;
+}
+
+.email-input {
+  margin-right: 12px;
+  padding: 15px 16px;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.email-input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-button {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  padding: 10px 28px;
+  background-color: var(--accent);
+  border-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--animation-duration) var(--animation-timing-function);
+}
+
+.icon-send {
+  margin-left: 10px;
+}
+
+.subscribe-button .button-txt {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: var(--main-background-color);
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 /*Portfolio*/
