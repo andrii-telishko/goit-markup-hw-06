@@ -89,10 +89,6 @@ body {
   overflow: hidden;
 }
 
-:focus {
-  outline: none;
-}
-
 /*Header*/
 
 .header > .conteiner {
@@ -651,7 +647,6 @@ body {
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: var(--animation-duration) var(--animation-timing-function);
 }
 
 .icon-send {
@@ -665,12 +660,6 @@ body {
   letter-spacing: 0.06em;
 
   color: var(--main-background-color);
-}
-
-.button:hover,
-.button:focus {
-  background-color: transparent;
-  border-color: rgba(255, 255, 255, 0.3);
 }
 
 /*Portfolio*/
@@ -932,6 +921,7 @@ body {
   position: absolute;
   bottom: 11px;
   left: 12px;
+  fill: #212121;
 }
 
 .input::placeholder {
@@ -945,7 +935,6 @@ body {
 
 .accept-label,
 .accept-link {
-  margin-left: 8px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.17;
@@ -972,7 +961,44 @@ body {
   transition: var(--animation-duration) var(--animation-timing-function);
 }
 
-.modal-form .button:hover,
-.modal-form .button:focus {
-  background-color: var(--text-nav-tittle);
+.input:focus {
+  outline-color: var(--accent);
+}
+
+.input:focus + .input-icon {
+  fill: var(--accent);
+}
+
+.accept-checkbox {
+  display: inline-flex;
+  align-items: center;
+}
+
+.checkbox {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.accept-label::before {
+  content: '';
+  display: inline-flex;
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--text-nav-tittle);
+  border-radius: 2px;
+}
+
+.checkbox:checked + .accept-label:before {
+  background-color: var(--accent);
+  border-color: transparent;
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
 }
